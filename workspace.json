@@ -1,0 +1,9 @@
+{
+  "$schema": "./node_modules/nx/schemas/workspace-schema.json",
+  "version": 2,
+  "projects": {
+    "backend": "packages/backend",
+    "components": "libs/components",
+    "application": "packages/application"
+  }
+}
