@@ -1,0 +1,30 @@
+syntax = "proto3";
+
+package dog.odzi.mishok.v1;
+
+// 
+// Tokens service declaration
+// 
+
+message Token {
+  string id = 1;
+  Token.Type type = 2;
+
+  enum Type {
+    SCRAPPER = 0;
+    USER = 1;
+  }
+}
+
+service Tokens {
+  rpc GetToken(GetTokenRequest) returns (Token) {}
+  rpc CreateToken(CreateTokenRequest) returns (Token) {}
+}
+
+message GetTokenRequest {
+  string id = 1;
+}
+
+message CreateTokenRequest {
+  string test = 1;
+}

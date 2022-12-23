@@ -1,8 +1,7 @@
 {
-    "$schema": "../../node_modules/nx/schemas/project-schema.json",
-    "sourceRoot": "packages/application",
-    "projectType": "application",
-    "targets": {},
-    "tags": []
-  }
-  
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "packages/application",
+  "projectType": "application",
+  "targets": {},
+  "tags": []
+}

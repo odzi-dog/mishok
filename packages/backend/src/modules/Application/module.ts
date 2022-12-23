@@ -1,6 +1,8 @@
 import { Module } from '@nestjs/common';
 
-@Module()
-export class ApplicationModule {
+import * as Modules from '../';
 
-};
+@Module({
+  imports: [...Object.values(Modules)],
+})
+export class ApplicationModule {}

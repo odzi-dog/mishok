@@ -1,8 +1,7 @@
 {
-    "$schema": "../../node_modules/nx/schemas/project-schema.json",
-    "sourceRoot": "libs/components",
-    "projectType": "components",
-    "targets": {},
-    "tags": []
-  }
-  
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/components",
+  "projectType": "components",
+  "targets": {},
+  "tags": []
+}

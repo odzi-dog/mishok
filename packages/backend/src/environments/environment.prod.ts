@@ -1,5 +1,3 @@
-import { IEnvironment } from "./environment.type";
+import { IEnvironment } from './environment.type';
 
-export const environment: IEnvironment = {
-  globalPrefix: "",
-};
+export const environment: IEnvironment = {};

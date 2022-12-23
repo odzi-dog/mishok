@@ -10,8 +10,20 @@
         "outputPath": "dist/packages/backend",
         "main": "packages/backend/src/main.ts",
         "tsConfig": "packages/backend/tsconfig.app.json",
-        "assets": ["packages/backend/src/assets"]
+        "assets": [
+          {
+            "glob": "**/*",
+            "input": "packages/protos/v1",
+            "output": "./assets/protos/v1"
+          },
+          {
+            "glob": "**/*",
+            "input": "packages/generated/typescript/v1",
+            "output": "./assets/protos/generated/v1"
+          }
+        ]
       },
+      "dependsOn": ["protos:gen"],
       "configurations": {
         "production": {
           "optimization": true,
