@@ -1,6 +1,7 @@
 syntax = "proto3";
-
 package dog.odzi.mishok.v1;
+
+import "content.proto";
 
 // 
 // User profile object
@@ -14,6 +15,7 @@ message Profile {
     repeated Profile.Liked liked = 4;
 
     message Liked {
+        ContentType type = 0;
         string entityId = 1;
     }
 
