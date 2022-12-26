@@ -1,0 +1,68 @@
+syntax = "proto3";
+
+package dog.odzi.mishok.v1;
+
+// 
+// User profile object
+message Profile {
+    // Common profile information
+    string id = 1;
+    string username = 2;
+    optional string name = 3;
+
+    // Liked entities information
+    repeated Profile.Liked liked = 4;
+
+    message Liked {
+        string entityId = 1;
+    }
+
+    // Liked/Disliked tags
+    repeated Profile.Tag tags = 5;
+
+    message Tag {
+        string tagId = 1;
+        float score = 2;
+    }
+
+    // Devices meta information
+    repeated Profile.Device devices = 6;
+
+    message Device {
+        string id = 1;
+
+        // Device type
+        Profile.Device.Type type = 2;
+
+        enum Type {
+            PHONE = 0;
+            COMPUTER = 1;
+            OTHER = 2;
+        }
+
+        // Device meta information
+        int32 availableSpace = 3;
+    }
+}
+
+// 
+// Profiles service
+service Profiles {
+    rpc FetchOne(FetchOneRequest) returns (Profile) {}
+    rpc Create(CreateRequest) returns (Profile) {}
+}
+
+// > FetchOne
+message FetchOneRequest {
+    optional string id = 1;
+    optional string username = 2;
+}
+
+// > Create
+message CreateRequest {
+    string username = 1;
+    optional Profile.Device device = 2;
+    repeated Profile.Tag tags = 3;
+}
+
+// > 
