@@ -1,9 +1,0 @@
-syntax = "proto3";
-package dog.odzi.mishok.v1;
-
-// Allowed post types
-enum ContentType {
-    IMAGE = 0;
-    VIDEO = 0;
-    STORY = 0;
-}
