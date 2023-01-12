@@ -1,0 +1,17 @@
+{
+    "$schema": "../../node_modules/nx/schemas/project-schema.json",
+    "sourceRoot": "packages/functions/src",
+    "projectType": "package",
+    "targets": {
+      "build": {
+        "executor": "@nrwl/workspace:run-commands",
+        "options": {
+          "commands": [
+            ""
+          ]
+        }
+      }
+    },
+    "tags": []
+  }
+  
