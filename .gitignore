@@ -43,3 +43,4 @@ _generated
 generated
 edgeql-js
 dist
+.lazyedge

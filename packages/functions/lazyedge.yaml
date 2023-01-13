@@ -1,0 +1,18 @@
+# Deployment configuration
+deploy:
+  namespace: mishok
+  registry: registry.odzi.dog/mishok
+  builder:
+    type: s2i
+    platform: linux/arm64
+
+# Env variables
+
+# Routes
+routes:
+  # - name: create-post
+  #   entrypoint: ./routes/scrapper/create_post.ts
+  # - name: get-routes-mapping
+  #   entrypoint: ./routes/get_routes_mapping.ts
+  - name: generate-token
+    entrypoint: ./routes/generate_token.ts

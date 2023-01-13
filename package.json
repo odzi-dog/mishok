@@ -5,10 +5,20 @@
   "scripts": {
     "start": "nx serve",
     "build": "nx build",
-    "test": "nx test"
+    "test": "nx test",
+    "function": "npx esbuild ./packages/functions/routes/scrapper/create_post.ts --outfile=./packages/functions/tests/index.js --bundle --platform=node && faas-js-runtime --log-level=info ./packages/functions/tests/index.js",
+    "deploy": "cd packages/functions && lazyedge deploy"
+  },
+  "engines": {
+    "node": ">=18"
   },
   "private": true,
   "dependencies": {
+    "crypto": "^1.0.1",
+    "cryptr": "^6.1.0",
+    "jsonschema": "^1.4.1",
+    "jsonwebtoken": "^9.0.0",
+    "pocketbase": "^0.10.0",
     "reflect-metadata": "^0.1.13",
     "tslib": "^2.3.0"
   },
@@ -22,16 +32,20 @@
     "@nrwl/workspace": "14.6.4",
     "@tsconfig/node12": "^1.0.11",
     "@tsconfig/node16": "^1.0.3",
+    "@types/cryptr": "^4.0.1",
     "@types/express": "^4.17.15",
     "@types/jest": "28.1.1",
+    "@types/jsonwebtoken": "^9.0.0",
     "@types/node": "16.11.7",
     "@typescript-eslint/eslint-plugin": "~5.33.1",
     "@typescript-eslint/parser": "~5.33.1",
     "eslint": "~8.15.0",
     "eslint-config-prettier": "8.1.0",
     "express": "^4.18.2",
+    "faas-js-runtime": "^0.9.7",
     "jest": "28.1.1",
     "jest-environment-jsdom": "28.1.1",
+    "lazyedge": "^1.0.2",
     "nx": "14.6.4",
     "prettier": "^2.6.2",
     "ts-jest": "28.0.5",

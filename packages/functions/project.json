@@ -3,12 +3,13 @@
     "sourceRoot": "packages/functions/src",
     "projectType": "package",
     "targets": {
-      "build": {
+      "deploy": {
         "executor": "@nrwl/workspace:run-commands",
         "options": {
           "commands": [
-            ""
-          ]
+            "npx lazyedge deploy"
+          ],
+          "cwd": "packages/functions"
         }
       }
     },
