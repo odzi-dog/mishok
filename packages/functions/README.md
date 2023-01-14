@@ -8,9 +8,9 @@ This section contains some kind of a documentation on functions, their routes an
 
 - **routes/get_routes_mapping**
 
-    **Route**: [https://get-routes-mapping.mishok.func.odzi.dog](https://get-routes-mapping.mishok.func.odzi.dog)
-    **State**: *working*
-    **Method**: *GET*
+    **Route**: [https://get-routes-mapping.mishok.func.odzi.dog](https://get-routes-mapping.mishok.func.odzi.dog)   
+    **State**: *working*    
+    **Method**: *GET*   
 
     This function is intended to be used by mishok's sdk package. This route returns JSON object with structure: `{ [key: string]: string }`, in which key corresponds to project-specific action name *(like scrapper::create_post or root::generate_token)* and valud corresponds to this action's route.
 
@@ -18,10 +18,10 @@ This section contains some kind of a documentation on functions, their routes an
 
 - **routes/generate_token**
 
-    **Route**: [https://generate-token.mishok.func.odzi.dog](https://generate-token.mishok.func.odzi.dog)
-    **State**: *working*
-    **Method**: *POST*
-    **SDK Action Mapping**: *root::generate_token*
+    **Route**: [https://generate-token.mishok.func.odzi.dog](https://generate-token.mishok.func.odzi.dog)   
+    **State**: *working*    
+    **Method**: *POST*  
+    **SDK Action Mapping**: *root::generate_token*  
 
     This function is intended to create different kinds of tokens. Currently it supports creation of *auth* tokens with custom payload, which is used to create new posts using **routes/scrapper/create_post** route.
 
@@ -29,10 +29,10 @@ This section contains some kind of a documentation on functions, their routes an
 
 - **routes/scrapper/create_post**
 
-    **Route**: [https://create-post.mishok.func.odzi.dog](https://create-post.mishok.func.odzi.dog)
-    **State**: *WIP*
-    **Method**: *POST*
-    **SDK Action Mapping**: *scrapper::create_post*
+    **Route**: [https://create-post.mishok.func.odzi.dog](https://create-post.mishok.func.odzi.dog) 
+    **State**: *WIP*    
+    **Method**: *POST*  
+    **SDK Action Mapping**: *scrapper::create_post* 
 
     With this function you'll be able to add new posts to mishok's database.
 
