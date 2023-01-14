@@ -29,9 +29,9 @@ This section contains some kind of a documentation on functions, their routes an
 
 - **routes/scrapper/create_post**
 
-    **Route**: [https://create-post.mishok.func.odzi.dog](https://create-post.mishok.func.odzi.dog) 
+    **Route**: [https://create-post.mishok.func.odzi.dog](https://create-post.mishok.func.odzi.dog)     
     **State**: *WIP*    
-    **Method**: *POST*  
+    **Method**: *POST*      
     **SDK Action Mapping**: *scrapper::create_post* 
 
     With this function you'll be able to add new posts to mishok's database.
