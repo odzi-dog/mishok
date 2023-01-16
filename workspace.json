@@ -3,6 +3,7 @@
   "version": 2,
   "projects": {
     "sdk": "libs/sdk",
-    "functions": "packages/functions"
+    "functions": "packages/functions",
+    "dashboard": "apps/dashboard"
   }
 }
