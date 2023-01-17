@@ -1,8 +1,8 @@
 import { Context, IncomingBody, StructuredReturn } from "faas-js-runtime";
-import { TokenPayload, TokenType } from "../types";
+import { TokenPayload, TokenType } from "@mishok/types";
 import { ErrorResponse, getClient } from "../helpers";
 import { Schema } from "jsonschema";
-import jwt from "jsonwebtoken";
+import * as jwt from "jsonwebtoken";
 import { jwtConfig } from "../helpers/JWTConfig";
 import { SchemaValidator } from "../helpers/SchemaValidator";
 import { createToken } from "../helpers/tokens/CreateToken";

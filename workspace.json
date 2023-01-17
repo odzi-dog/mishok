@@ -2,8 +2,9 @@
   "$schema": "./node_modules/nx/schemas/workspace-schema.json",
   "version": 2,
   "projects": {
-    "sdk": "libs/sdk",
+    "dashboard": "apps/dashboard",
     "functions": "packages/functions",
-    "dashboard": "apps/dashboard"
+    "sdk": "libs/sdk",
+    "types": "libs/types"
   }
 }

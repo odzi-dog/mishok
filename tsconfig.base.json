@@ -8,15 +8,17 @@
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
     "importHelpers": true,
-    "target": "es2015",
-    "module": "esnext",
-    "lib": ["es2017", "dom"],
+    "target": "ES2015",
+    "module": "ESNext",
+    "lib": ["ES2017"],
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@repo/sdk": ["libs/sdk/src/index.ts"]
+      "@mishok/sdk": ["libs/sdk/src/index.ts"],
+      "@mishok/types": ["libs/types/src/index.ts"],
+      "@mishok/functions": ["packages/functions/types/index.ts"],
     }
   },
-  "exclude": ["node_modules", "tmp"]
+  "exclude": ["node_modules", "tmp", ".lazyedge"]
 }

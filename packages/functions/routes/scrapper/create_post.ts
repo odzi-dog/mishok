@@ -1,10 +1,11 @@
-import { Context, StructuredReturn, IncomingBody } from "faas-js-runtime";
+import { Context, StructuredReturn } from "faas-js-runtime";
 import { getClient } from "../../helpers/PocketBase";
 import { Schema } from "jsonschema";
 import { authorizeToken } from "../../helpers/authorization/AuthorizeToken";
-import { PostStatus, PostType } from "../../types";
+import { PostStatus, PostType } from "@mishok/types";
 import { ErrorResponse, SchemaValidator } from "../../helpers";
 import { Record, ClientResponseError } from "pocketbase";
+import { CreatePostRequest } from "packages/functions/types";
 
 // Body schema
 const bodySchema: Schema = {
@@ -53,19 +54,7 @@ const bodySchema: Schema = {
     required: [ "type" ]
 };
 
-interface Body {
-    // Post information
-    type: PostType,
-    title?: string,
-    tags?: Array<string>,
-
-    // PostType-related data
-    text?: Object,
-    videos?: Array<Object>,
-    images?: Array<{ url: string }>,
-};
-
-export async function handle(context: Context, body: Body): Promise<StructuredReturn> {
+export async function handle(context: Context, body: CreatePostRequest): Promise<StructuredReturn> {
     // Creating Pocketbase API Client
     const client = getClient();
     

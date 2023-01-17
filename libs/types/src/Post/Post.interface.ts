@@ -11,6 +11,6 @@ export interface Post {
     createdBy: Identifier,
     
     // PostType-related
-    text?: Object,
-    viderUrls?: Object,
+    text?: Record<string, unknown>,
+    viderUrls?: Record<string, unknown>,
 };
