@@ -1,2 +1,2 @@
 // Exporting everything
-export * from './scrapper';
+export * from './posts';

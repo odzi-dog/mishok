@@ -1,7 +1,7 @@
 import type PocketBase from "pocketbase";
 import { jwtConfig } from "../JWTConfig";
-import jwt from "jsonwebtoken";
-import { AuthTokenPayload, TokenType } from "../../types";
+import * as jwt from "jsonwebtoken";
+import { AuthTokenPayload, TokenType } from "@mishok/types";
 import { decryptText } from "../crypto";
 
 export async function authorizeToken(client: PocketBase, jwtToken: string): Promise<{ isAuthorized: boolean, auth: AuthTokenPayload }> {

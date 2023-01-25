@@ -8,7 +8,6 @@ export class BaseService {
     public _getActionOptions(): ActionOptions {
         return {
             apiUrl: this.options.apiUrl,
-            mappings: this.options.mappings
         };
     };
 };

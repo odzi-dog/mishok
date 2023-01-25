@@ -17,7 +17,7 @@
     "paths": {
       "@mishok/sdk": ["libs/sdk/src/index.ts"],
       "@mishok/types": ["libs/types/src/index.ts"],
-      "@mishok/functions": ["packages/functions/types/index.ts"],
+      "@mishok/functions": ["packages/functions/types/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp", ".lazyedge"]

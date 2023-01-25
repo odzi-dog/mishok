@@ -5,9 +5,6 @@ export class Action<Body, Response> {
     payload: Body;
     response: Response;
     
-    // from ActionDefinition
-    mapping: string;
-    
     // Implementation-related
     // eslint-disable-next-line @typescript-eslint/no-unused-vars
     public handle(sdk: ActionOptions, payload: Body): Response {
