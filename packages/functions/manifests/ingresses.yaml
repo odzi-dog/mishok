@@ -1,0 +1,39 @@
+apiVersion: traefik.containo.us/v1alpha1
+kind: IngressRoute
+metadata:
+  name: v1-functions
+  namespace: mishok
+spec:
+  entryPoints:
+  - web
+  - websecure
+  routes:
+    # routes/posts/create.ts
+    - match: Host(`apis.odzi.dog`) && PathPrefix(`/posts/create`)
+      kind: Rule
+      services:
+        - name: backend-proxy
+          port: "entrypoint"
+      middlewares:
+        - name: default-prefix
+
+    # routes/generate_token.ts
+    - match: Host(`apis.odzi.dog`) && PathPrefix(`/auth/generate-token`)
+      kind: Rule
+      services:
+        - name: backend-proxy
+          port: "entrypoint"
+      middlewares:
+        - name: default-prefix
+  tls:
+    certResolver: "cloudflare"
+
+---
+apiVersion: traefik.containo.us/v1alpha1
+kind: Middleware
+metadata:
+  name: default-prefix
+  namespace: mishok
+spec:
+  addPrefix:
+    prefix: /mishok/v1

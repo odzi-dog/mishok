@@ -8,7 +8,7 @@ This section contains some kind of a documentation on functions, their routes an
 
 - **routes/generate_token**
 
-    **Route**: [https://generate-token.mishok.func.odzi.dog](https://generate-token.mishok.func.odzi.dog)   
+    **Route**: [https://apis.odzi.dog/mishok/v1/auth/generate-token](https://apis.odzi.dog/mishok/v1/auth/generate-token)   
     **State**: *working*    
     **Method**: *POST*  
 
@@ -18,7 +18,7 @@ This section contains some kind of a documentation on functions, their routes an
 
 - **routes/posts/create**
 
-    **Route**: [https://create-post.mishok.func.odzi.dog](https://create-post.mishok.func.odzi.dog)     
+    **Route**: [https://apis.odzi.dog/mishok/v1/posts/create](https://apis.odzi.dog/mishok/v1/posts/create)     
     **State**: *WIP*    
     **Method**: *POST*      
 
